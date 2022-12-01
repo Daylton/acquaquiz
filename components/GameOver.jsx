@@ -16,6 +16,11 @@ const GameOver = () => {
       </p>
       {/* <img className="img" src={welldone} alt="Fim do Quiz"></img> */}
       <div className="p-10">
+
+      <div>
+        <h1>Insira seu nome</h1>
+      </div>
+
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           onClick={() => dispatch({ type: "NEW_GAME" })}

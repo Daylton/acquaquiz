@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +19,8 @@ function NavBar() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  activeClass="home"
-                  to="home"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+                  activeClass="cards"
+                  href="/cards"
                   className="cursor-pointer text-blue-600 font-semibold px-3 py-2 text-base hover:font-black"
                 >
                   HOME
@@ -31,34 +28,24 @@ function NavBar() {
                 <Link
                   href="/quiz"
                   activeClass="quiz"
-                  to="quiz"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   QUIZ
                 </Link>
                 <Link
-                  activeClass="estatisticas"
-                  to="estatisticas"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+                  activeClass="pontuacao"
+                  href="pontuacao"
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  ESTATÍSTICAS
+                  PONTUAÇÃO
                 </Link>
-                <Link
+                {/* <Link
                   activeClass="sobre"
-                  to="sobre"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+                  href="sobre"
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   SOBRE
-                </Link>
+                </Link> */}
                 {/* <Link
                   activeClass="entrar"
                   to="entrar"
