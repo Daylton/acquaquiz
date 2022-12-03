@@ -32,7 +32,7 @@ export class RealtimeData extends React.Component {
       <Table className="container w-75" bordered striped>
         <thead>
           <tr>
-            <th>Index</th>
+            <th>Posição</th>
             <th>Nome</th>
             <th>Pontuação</th>
           </tr>
@@ -41,7 +41,7 @@ export class RealtimeData extends React.Component {
           {this.state.tableData.map((row, index) => {
             return (
               <tr key={index}>
-                <td>{index}</td>
+                <td>{index + 1}</td>
                 <td>{row.nome}</td>
                 <td>{row.data}</td>
               </tr>

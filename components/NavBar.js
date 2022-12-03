@@ -39,23 +39,6 @@ function NavBar() {
                 >
                   PONTUAÇÃO
                 </Link>
-                {/* <Link
-                  activeClass="sobre"
-                  href="sobre"
-                  className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  SOBRE
-                </Link> */}
-                {/* <Link
-                  activeClass="entrar"
-                  to="entrar"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer bg-blue-600 text-white px-3 py-2 hover:bg-black rounded-md text-sm font-medium"
-                >
-                  ENTRAR
-                </Link> */}
               </div>
             </div>
             <div className="mr-10 flex md:hidden">
@@ -163,17 +146,6 @@ function NavBar() {
                 >
                   SOBRE
                 </Link>
-                {/* <Link
-                  href="/entrar"
-                  activeClass="entrar"
-                  to="entrar"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  ENTRAR
-                </Link> */}
               </div>
             </div>
           )}

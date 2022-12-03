@@ -1,4 +1,5 @@
 import NavBar from "./NavBar";
+import { Table } from "react-bootstrap";
 
 export default function Layout({ children }) {
   return (

@@ -6,14 +6,6 @@ import welldone from "../img/welldone.jpg";
 import StartFirebase from "./firebaseConfig";
 import { async } from "@firebase/util";
 
-function writeUserData(name, score) {
-  const db = StartFirebase;
-  set(ref(db, "ranking"), {
-    name: name,
-    score: score,
-  });
-}
-
 const GameOver = () => {
   const [quizState, dispatch] = useContext(QuizContext);
 
@@ -26,6 +18,18 @@ const GameOver = () => {
     name: "",
     score: "",
   });
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setJogador({ ...jogador, [event.target.name]: value })
+  }
+
+  function writeUserData() {
+    const db = StartFirebase();
+    set(ref(db, "ranking"), {
+      ...jogador
+    });
+  }
 
   const saveJogador = async (e) => {
     e.preventDefault();
@@ -60,6 +64,8 @@ const GameOver = () => {
           className="border mt-0 mb-4"
           type="text" 
           name="name"
+          value={jogador.name}
+          onChange={(e) => handleChange(e)}
            />
         </div>
         </div>
@@ -77,7 +83,7 @@ const GameOver = () => {
         <div className="mb-10">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-            onClick={saveJogador}
+            // onClick={saveJogador}
           >
             Enviar pontuação
           </button>
